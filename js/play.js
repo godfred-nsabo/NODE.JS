@@ -58,3 +58,8 @@ for (let hobi of hobby) {
 }
 
 console.log(hobby.map((hoby) => "Hobby: " + hoby));
+
+// Reference Types
+
+hobby.push('Programming ', 'Mathematics');
+console.log(hobby);
