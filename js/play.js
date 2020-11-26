@@ -63,3 +63,6 @@ console.log(hobby.map((hoby) => "Hobby: " + hoby));
 
 hobby.push('Programming ', 'Mathematics');
 console.log(hobby);
+
+// Rest and Spreed Operator
+
