@@ -1,6 +1,6 @@
 //importing in Node.js
 const http = require("http");
-
+const fs = require('fs');
 /*const rqListener = (req, res) => {
   console.log(req);
 };*/
@@ -10,6 +10,7 @@ const http = require("http");
 
 const server = http.createServer(function (req, res) {
   const url = req.url;
+  const method = req.method;
   if (url === '/'){
     res.write("<html>");
     res.write("<head><title>Enter Message</title></head>");
@@ -18,6 +19,12 @@ const server = http.createServer(function (req, res) {
     return res.end();
   };
     //process.exit(); // or use CTRL + C
+   if(url ==='/message' && method === 'POST') {
+        fs.writeFileSync('message.txt', 'DEPLOY');
+        res.statusCode = 302;
+        res.setHeader('location', '/')
+        return res.end();
+   }
   res.setHeader("Content-Type", "text/html");
   res.write("<html>");
   res.write("<head><title>My First Page</title></head>");
