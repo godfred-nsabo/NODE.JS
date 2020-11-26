@@ -9,7 +9,15 @@ const http = require("http");
 // or using the anomymous function
 
 const server = http.createServer(function (req, res) {
-  //process.exit(); // or use CTRL + C
+  const url = req.url;
+  if (url === '/'){
+    res.write("<html>");
+    res.write("<head><title>Enter Message</title></head>");
+    res.write('<body><form action="/message" method="POST"><input type="text" name ="message"><button type="submit">Send</button></form></body>');
+    res.write("</html>");
+    return res.end();
+  };
+    //process.exit(); // or use CTRL + C
   res.setHeader("Content-Type", "text/html");
   res.write("<html>");
   res.write("<head><title>My First Page</title></head>");
