@@ -30,13 +30,15 @@ console.log(sum(1, 3));
 console.log(sum1(14));
 console.log(summariseUser(name, age, hasHobbies));
 
+// Working with Objects
+
 const person = {
   name: "Goddey",
   age: 29,
   greet: () => {
     console.log("Hello, I am " + this.name);
   },
-  greet1: function() {
+  greet1: function () {
     console.log("Hello, I am " + this.name);
   },
   greet2() {
@@ -47,3 +49,12 @@ const person = {
 person.greet();
 person.greet1();
 person.greet2();
+
+//Arrays
+
+const hobby = ["sports", "cooking"];
+for (let hobi of hobby) {
+  console.log(hobi);
+}
+
+console.log(hobby.map((hoby) => "Hobby: " + hoby));
