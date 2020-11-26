@@ -1,6 +1,6 @@
 var name = "GOdfred";
 var age = 29;
-var hasHobbies = false;
+var hasHobbies = false; 
 
 console.log(name);
 
@@ -85,3 +85,26 @@ console.log(toArray(1, 3, 4));
 //Applying Rest
 const toArray1 = (...args) => args;
 console.log(toArray1(1, 3, 4, 5, 6));
+
+//Destructuring
+
+// from object..perosn
+
+const printName = (personData) => {
+  console.log(personData.name);
+};
+
+const printName1 = ({ name }) => {
+  console.log(name);
+};
+
+printName(person);
+printName1(person);
+
+// const { name, age } = person;
+// console.log(name, age);
+
+//from array..hoby  
+
+const [hobby1, hobby2] = hobby;
+console.log(hobby1, hobby2);
