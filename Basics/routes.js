@@ -39,4 +39,19 @@ const requestHandler = (req, res) => {
   res.end();
 };
 
-module.exports = requestHandler; // exports globally
+//module.exports = requestHandler; // exports globally
+
+// for many exports we use
+
+/*module.exports = {
+handler: requestHandler,
+someText: 'Some hard coded text'
+}; */
+
+// Alternative way of writing multiple lines of exports
+
+module.exports.handler = requestHandler; // Short way is to omit the module and use exports.<name>
+module.exports.someText = "Some Hard Coded Text";
+
+//exports.handler = requestHandler;
+//exports.someText = "Some Hard Coded Text";

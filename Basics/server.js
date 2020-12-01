@@ -4,6 +4,8 @@ const http = require("http");
 
 const routes = require("./routes.js");
 
+console.log(routes.someText);
+
 // const fs = require("fs");
 //const { chdir } = require("process");
 /*const rqListener = (req, res) => {
@@ -13,10 +15,12 @@ const routes = require("./routes.js");
 //http.createServer(rqListener);
 // or using the anomymous function
 
-const server = http.createServer(routes)
+//const server = http.createServer(routes)
+const server = http.createServer(routes.handler);
+
   // const url = req.url;
   // const method = req.method;
-  
+
 server.listen(5000);
 
 // or using Nextgen function
