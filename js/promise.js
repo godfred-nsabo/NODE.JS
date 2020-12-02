@@ -14,7 +14,7 @@ setTimeout(() => {
 console.log("Hello");
 console.log("Hi");*/
 
-// implementing Promise and Async
+// implementing Promise 
 const fetchData = () => {
   const promise = new Promise((resolve, reject) => {
     setTimeout(() => {
